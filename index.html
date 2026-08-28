@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2026 숭실대학교 소상공인 디지털 특성화대학 | 교육생 종합 안내</title>
+<meta name="description" content="교육 일정, 수료 기준, 온라인 필수교육, 출석, 준비물, 신청 절차, FAQ를 한눈에 확인하는 교육생 종합 안내페이지" />
+<style>
+  :root{
+    --navy:#0c2d57;
+    --blue:#1458a7;
+    --sky:#eef6ff;
+    --ink:#16202a;
+    --muted:#64748b;
+    --line:#dce6f1;
+    --bg:#f5f8fc;
+    --white:#fff;
+    --green:#138a5b;
+    --orange:#d97706;
+    --red:#c33b3b;
+    --shadow:0 12px 34px rgba(15, 40, 80, .10);
+    --radius:22px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+  }
+  a{color:inherit}
+  .wrap{width:min(1120px, calc(100% - 32px)); margin:auto}
+  .topbar{
+    background:#081f3d;color:#dbeafe;font-size:14px;text-align:center;padding:9px 16px
+  }
+  header{
+    position:sticky;top:0;z-index:40;
+    background:rgba(255,255,255,.94);backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(220,230,241,.9)
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:900;color:var(--navy)}
+  .logo{
+    width:42px;height:42px;border-radius:13px;background:var(--navy);color:white;
+    display:grid;place-items:center;font-weight:900;letter-spacing:-1px
+  }
+  .brand small{display:block;color:var(--muted);font-size:11px;font-weight:700}
+  .navlinks{display:flex;gap:18px;font-size:14px;font-weight:800}
+  .navlinks a{text-decoration:none;color:#334155}
+  .hero{
+    background:
+      radial-gradient(circle at 90% 0%, rgba(65,140,220,.28), transparent 36%),
+      linear-gradient(135deg,#08264c 0%,#0f4d91 62%,#2271c7 100%);
+    color:white;padding:70px 0 58px;overflow:hidden
+  }
+  .hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+  .eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,255,255,.28);
+    background:rgba(255,255,255,.10);border-radius:999px;padding:7px 12px;font-size:13px;font-weight:800}
+  h1{font-size:clamp(34px,5vw,58px);line-height:1.12;margin:20px 0 18px;letter-spacing:-2.5px}
+  .hero p{font-size:18px;color:#e6f1ff;max-width:710px;margin:0}
+  .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;
+    border-radius:14px;padding:13px 17px;font-weight:900;border:1px solid transparent
+  }
+  .btn-white{background:#fff;color:#0e3c72}
+  .btn-ghost{border-color:rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.08)}
+  .hero-card{
+    background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.23);
+    border-radius:26px;padding:24px;box-shadow:0 25px 60px rgba(0,0,0,.16)
+  }
+  .hero-card h3{margin:0 0 14px;font-size:19px}
+  .check{display:flex;gap:10px;align-items:flex-start;margin:11px 0;color:#f2f7ff}
+  .tick{width:22px;height:22px;flex:0 0 22px;border-radius:50%;background:#d9fbe8;color:#087a4c;display:grid;place-items:center;font-size:13px;font-weight:900}
+  main{padding:34px 0 74px}
+  .quick{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-62px;position:relative;z-index:5
+  }
+  .quick a{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-decoration:none;box-shadow:var(--shadow)}
+  .quick b{display:block;color:var(--navy);margin-bottom:4px}
+  .quick span{font-size:13px;color:var(--muted)}
+  section{scroll-margin-top:92px;margin-top:56px}
+  .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:20px}
+  .kicker{font-size:13px;font-weight:900;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+  h2{font-size:32px;line-height:1.25;letter-spacing:-1.5px;margin:5px 0 0;color:#102b4b}
+  .sub{color:var(--muted);max-width:680px}
+  .notice{
+    border-radius:18px;padding:18px 20px;background:#fff8e8;border:1px solid #f4d796;
+    display:flex;gap:12px;align-items:flex-start
+  }
+  .notice strong{color:#9a5b00}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:0 8px 24px rgba(18,44,75,.05)}
+  .card h3{margin:0 0 7px;color:#173b68;font-size:20px}
+  .muted{color:var(--muted)}
+  .statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .stat{background:#fff;border-radius:18px;padding:20px;border:1px solid var(--line);text-align:center}
+  .stat strong{display:block;font-size:27px;color:var(--navy)}
+  .stat span{font-size:13px;color:var(--muted)}
+  .timeline{display:grid;gap:12px}
+  .step{display:grid;grid-template-columns:58px 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px}
+  .num{width:46px;height:46px;border-radius:14px;background:#eaf3ff;color:var(--blue);display:grid;place-items:center;font-weight:950}
+  .step b{display:block;color:#163a66;margin-bottom:2px}
+  .schedule{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .course{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 8px 24px rgba(18,44,75,.05)}
+  .course-head{padding:21px 22px;background:#edf5ff;border-bottom:1px solid var(--line)}
+  .course-head .tag{font-size:12px;font-weight:900;color:#1d5ca5}
+  .course-head h3{margin:5px 0 0;font-size:21px;color:#12365f}
+  .session{padding:18px 22px;border-top:1px solid #edf1f6}
+  .session:first-of-type{border-top:0}
+  .date{display:flex;justify-content:space-between;gap:10px;font-weight:900;color:#173c6a}
+  .time{font-size:13px;color:var(--blue);white-space:nowrap}
+  .session ul{padding-left:20px;margin:9px 0 0;color:#475569;font-size:14px}
+  .criteria{
+    background:linear-gradient(180deg,#fff,#f8fbff);border:2px solid #bfd7f1;border-radius:26px;padding:26px
+  }
+  .criteria-grid{display:grid;grid-template-columns:1fr 70px 1fr;gap:18px;align-items:stretch}
+  .criteria-box{background:#fff;border:1px solid var(--line);border-radius:19px;padding:21px}
+  .criteria-box .big{font-size:26px;font-weight:950;color:var(--navy)}
+  .plus{display:grid;place-items:center;font-size:38px;font-weight:300;color:#7d9bbc}
+  .danger{margin-top:16px;padding:14px 16px;border-radius:14px;background:#fff1f1;color:#a52d2d;font-weight:800}
+  .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 15px;display:flex;gap:10px}
+  .box{width:20px;height:20px;border:2px solid #8ea7c2;border-radius:5px;flex:0 0 auto;margin-top:2px}
+  details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0 18px}
+  details+details{margin-top:10px}
+  summary{cursor:pointer;list-style:none;padding:17px 0;font-weight:900;color:#193c67}
+  summary::-webkit-details-marker{display:none}
+  details p{margin:0 0 18px;color:#526176}
+  .links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .linkcard{display:block;background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px;text-decoration:none}
+  .linkcard b{display:block;color:#173e70}
+  .linkcard span{font-size:13px;color:var(--muted)}
+  footer{background:#091f3b;color:#ccdaea;padding:34px 0 48px}
+  footer strong{color:white}
+  .foot{display:grid;grid-template-columns:1.2fr .8fr;gap:30px}
+  .small{font-size:12px;color:#8ea5bf}
+  .mobilebar{display:none}
+  @media(max-width:860px){
+    .navlinks{display:none}
+    .hero{padding:50px 0 80px}
+    .hero-grid,.grid2,.schedule,.foot{grid-template-columns:1fr}
+    .hero-card{display:none}
+    .quick{grid-template-columns:1fr 1fr;margin-top:-48px}
+    .statrow{grid-template-columns:1fr 1fr}
+    .criteria-grid{grid-template-columns:1fr}
+    .plus{height:34px}
+    .checklist,.links{grid-template-columns:1fr}
+    .section-head{display:block}
+    h2{font-size:27px}
+    .mobilebar{
+      position:fixed;z-index:60;bottom:12px;left:12px;right:12px;display:grid;grid-template-columns:1fr 1fr;gap:8px;
+      background:rgba(8,31,61,.94);padding:9px;border-radius:17px;box-shadow:0 12px 35px rgba(0,0,0,.25)
+    }
+    .mobilebar a{padding:11px;border-radius:11px;text-align:center;text-decoration:none;font-size:13px;font-weight:900}
+    .mobilebar a:first-child{background:white;color:#123b70}
+    .mobilebar a:last-child{background:#2c72bd;color:white}
+    body{padding-bottom:78px}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">2026 숭실대학교 소상공인 디지털 특성화대학 · 교육비 전액 무료</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <div class="logo">SSU</div>
+      <div>소상공인 디지털 특성화대학<small>SOONGSIL UNIVERSITY · 2026</small></div>
+    </a>
+    <nav class="navlinks">
+      <a href="#overview">교육개요</a>
+      <a href="#schedule">일정</a>
+      <a href="#completion">수료기준</a>
+      <a href="#prepare">준비사항</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<div id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">📘 교육생 필독 · 종합 안내</div>
+      <h1>처음부터 수료까지,<br>이 페이지 하나로 확인하세요.</h1>
+      <p>교육 일정, 온라인 필수교육, 오프라인 출석, 준비물, 신청·선발 절차, 수료 기준과 자주 묻는 질문을 교육생 관점에서 최대한 자세히 정리했습니다.</p>
+      <div class="hero-actions">
+        <a class="btn btn-white" href="#completion">✓ 수료조건 먼저 확인</a>
+        <a class="btn btn-ghost" href="https://m.blog.naver.com/ssudt_/224375121250" target="_blank" rel="noopener">네이버 블로그 원문 ↗</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <h3>수료를 위해 꼭 기억할 3가지</h3>
+      <div class="check"><div class="tick">✓</div><div><b>온라인 교육 10시간 이상</b><br><small>소상공인 지식배움터 온라인판로개척 교육</small></div></div>
+      <div class="check"><div class="tick">✓</div><div><b>AI 학습관 강의 1개 이상</b><br><small>온라인 10시간과 별도로 필수 확인</small></div></div>
+      <div class="check"><div class="tick">✓</div><div><b>오프라인 20시간의 80% 이상 출석</b><br><small>온라인·오프라인 조건을 모두 충족해야 수료</small></div></div>
+    </aside>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="quick">
+    <a href="#schedule"><b>📅 전체 일정</b><span>기초·글로벌 과정 회차별 확인</span></a>
+    <a href="#completion"><b>🎓 수료 기준</b><span>온라인 + 오프라인 필수 조건</span></a>
+    <a href="#prepare"><b>💻 준비 사항</b><span>수업 전 체크리스트</span></a>
+    <a href="#faq"><b>❓ 자주 묻는 질문</b><span>신청·출석·수료·교육 난이도</span></a>
+  </div>
+
+  <section id="overview">
+    <div class="section-head">
+      <div><div class="kicker">Program overview</div><h2>교육 개요</h2></div>
+      <p class="sub">중소벤처기업부·소상공인시장진흥공단이 주관하고 숭실대학교가 운영하는 소상공인 디지털 전환 실무 교육입니다.</p>
+    </div>
+    <div class="statrow">
+      <div class="stat"><strong>100%</strong><span>교육비 국비 지원</span></div>
+      <div class="stat"><strong>30H</strong><span>온라인 10H + 오프라인 20H</span></div>
+      <div class="stat"><strong>3개 학기</strong><span>8월 · 9월 · 10월</span></div>
+      <div class="stat"><strong>실습 중심</strong><span>숏폼·AI·온라인 판로</span></div>
+    </div>
+    <div class="grid2" style="margin-top:18px">
+      <div class="card">
+        <h3>기초과정</h3>
+        <p class="muted">플랫폼 구축 및 숏폼 콘텐츠 마케팅 실무</p>
+        <p>인스타그램 계정 최적화, 판매형 숏폼 기획, ChatGPT 활용, VREW 영상 제작, 네이버 클립, 상품 결제 링크 연결, 공동구매·인플루언서 협업까지 실습합니다.</p>
+      </div>
+      <div class="card">
+        <h3>글로벌과정</h3>
+        <p class="muted">글로벌 판로 개척 및 AI 마케팅 고도화 실무</p>
+        <p>상품 선정·마진 구조, 키워드 전략, 페이오니아·이베이·아마존 입점, AI 상품정보 최적화, 자사몰 구축, 글로벌 이커머스 마케팅을 다룹니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="section-head">
+      <div><div class="kicker">How it works</div><h2>신청부터 수료까지 진행 순서</h2></div>
+    </div>
+    <div class="timeline">
+      <div class="step"><div class="num">01</div><div><b>소상공인24 사업 신청</b><span class="muted">소상공인24에서 디지털 특성화대학 사업 접수를 먼저 완료합니다.</span></div></div>
+      <div class="step"><div class="num">02</div><div><b>서류·자격 확인</b><span class="muted">사업자등록증, 소상공인확인서 등 신청 자격을 확인합니다.</span></div></div>
+      <div class="step"><div class="num">03</div><div><b>디지털 역량 진단 및 과정 확인</b><span class="muted">교육생의 수준과 목적에 맞는 과정·분반을 확인합니다.</span></div></div>
+      <div class="step"><div class="num">04</div><div><b>오프라인 실무교육 참여</b><span class="muted">선택한 과정의 전체 회차 일정을 확인하고 교육에 참여합니다.</span></div></div>
+      <div class="step"><div class="num">05</div><div><b>온라인 필수교육 이수</b><span class="muted">지식배움터 온라인판로개척 교육 10시간 이상 + AI 학습관 강의 1개 이상을 이수합니다.</span></div></div>
+      <div class="step"><div class="num">06</div><div><b>수료 및 사후지원</b><span class="muted">필수 수료조건을 모두 충족하면 수료가 인정되며 이후 멘토링·판로·홍보 등 사후지원이 이어집니다.</span></div></div>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="section-head">
+      <div><div class="kicker">Schedule</div><h2>2026 교육 일정</h2></div>
+      <p class="sub">아래 일정은 공개된 공식 교육안내를 기준으로 정리했습니다. 실제 분반·강의실·세부 운영시간은 운영사무국의 최종 안내를 우선해 주세요.</p>
+    </div>
+    <div class="notice">📌 <div><strong>중요:</strong> 신청 전 선택한 과정의 전체 3회차에 참여 가능한지 반드시 확인해 주세요. 교육 일정은 운영 상황에 따라 변경될 수 있습니다.</div></div>
+
+    <div class="schedule" style="margin-top:18px">
+      <article class="course">
+        <div class="course-head"><div class="tag">기초과정 · 8월</div><h3>플랫폼 구축 및 숏폼 콘텐츠 마케팅</h3></div>
+        <div class="session"><div class="date">8월 14일(금)<span class="time">10:00~19:00</span></div><ul><li>온라인 유통 물류</li><li>인스타그램 비즈니스 계정·프로필 최적화</li><li>판매형 숏폼 구조 분석·ChatGPT 대본</li><li>VREW 숏폼 제작 실습</li></ul></div>
+        <div class="session"><div class="date">8월 21일(금)<span class="time">10:00~19:00</span></div><ul><li>AI 네이버 클립 제작</li><li>숏폼 업로드·상품 결제 링크 연결</li><li>공동구매 콘텐츠 로드맵</li><li>인플루언서 협업 전략</li></ul></div>
+        <div class="session"><div class="date">8월 28일(금)<span class="time">09:00~14:00</span></div><ul><li>소상공인 디지털 전환 전략</li><li>소상공인을 위한 AI 툴 이용 방법</li><li>수료식 및 네트워킹</li></ul></div>
+      </article>
+
+      <article class="course">
+        <div class="course-head"><div class="tag">기초과정 · 9월</div><h3>플랫폼 구축 및 숏폼 콘텐츠 마케팅</h3></div>
+        <div class="session"><div class="date">9월 15일(화)<span class="time">10:00~19:00</span></div><ul><li>온라인 유통 물류</li><li>인스타그램 계정 최적화</li><li>판매전환형 숏폼 구조</li><li>AI 숏폼 제작 실습</li></ul></div>
+        <div class="session"><div class="date">9월 22일(화)<span class="time">10:00~19:00</span></div><ul><li>AI 네이버 클립 제작</li><li>플랫폼별 업로드·결제 링크</li><li>공동구매·AI 공구 콘텐츠</li><li>인플루언서 협업 실행계획</li></ul></div>
+        <div class="session"><div class="date">9월 29일(화)<span class="time">09:00~14:00</span></div><ul><li>디지털 전환 전략</li><li>AI 툴 이용 방법</li><li>수료식 및 네트워킹</li></ul></div>
+      </article>
+
+      <article class="course">
+        <div class="course-head"><div class="tag">글로벌과정 · 9월</div><h3>글로벌 판로 개척 및 AI 마케팅 고도화</h3></div>
+        <div class="session"><div class="date">9월 7일(월)<span class="time">10:00~19:00</span></div><ul><li>위탁판매 상품 선정·마진 구조</li><li>상위 노출 키워드 전략</li><li>온라인 유통 물류</li><li>페이오니아·이베이·아마존 입점</li></ul></div>
+        <div class="session"><div class="date">9월 14일(월)<span class="time">10:00~19:00</span></div><ul><li>AI 상품명·상세페이지·썸네일</li><li>자사몰 구축</li><li>이베이·아마존 상품정보 최적화</li><li>글로벌 이커머스 마케팅</li></ul></div>
+        <div class="session"><div class="date">9월 29일(화)<span class="time">13:00~18:00</span></div><ul><li>수료식·네트워킹</li><li>AI 툴 이용 방법</li><li>디지털 전환 전략</li></ul></div>
+      </article>
+
+      <article class="course">
+        <div class="course-head"><div class="tag">10월 과정</div><h3>기초·글로벌 과정</h3></div>
+        <div class="session"><div class="date">기초 1회차<span class="time">10/15(목) 10:00~19:00</span></div></div>
+        <div class="session"><div class="date">기초 2회차<span class="time">10/22(목) 10:00~19:00</span></div></div>
+        <div class="session"><div class="date">기초 3회차<span class="time">10/29(목) 09:00~14:00</span></div></div>
+        <div class="session"><div class="date">글로벌 1회차<span class="time">10/19(월) 10:00~19:00</span></div></div>
+        <div class="session"><div class="date">글로벌 2회차<span class="time">10/26(월) 10:00~19:00</span></div></div>
+        <div class="session"><div class="date">글로벌 3회차<span class="time">10/29(목) 13:00~18:00</span></div></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="completion">
+    <div class="section-head">
+      <div><div class="kicker">Completion</div><h2>수료 기준 — 가장 중요합니다</h2></div>
+      <p class="sub">온라인 교육과 오프라인 출석 중 하나만 충족해서는 수료가 인정되지 않습니다. 두 조건을 모두 완료해야 합니다.</p>
+    </div>
+    <div class="criteria">
+      <div class="criteria-grid">
+        <div class="criteria-box"><div class="muted">온라인 필수교육</div><div class="big">10시간 이상 + AI 1강</div><p>소상공인 지식배움터의 온라인판로개척(e커머스) 교육을 총 10시간 이상 이수하고, AI 학습관 강의를 1개 이상 이수합니다.</p></div>
+        <div class="plus">+</div>
+        <div class="criteria-box"><div class="muted">오프라인 실무교육</div><div class="big">20시간 중 80% 이상</div><p>오프라인 실습교육의 출석 기준을 충족해야 합니다. 입·퇴실 및 출결 확인 절차를 빠뜨리지 않도록 유의해 주세요.</p></div>
+      </div>
+      <div class="danger">⚠ 온라인 필수교육을 이수하지 않으면 오프라인 출석률을 충족했더라도 수료할 수 없습니다.</div>
+    </div>
+  </section>
+
+  <section id="online">
+    <div class="section-head">
+      <div><div class="kicker">Online learning</div><h2>온라인 필수교육 이수 방법</h2></div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>① 지식배움터 접속</h3>
+        <p>소상공인 지식배움터에 로그인한 뒤 온라인판로개척 관련 교육을 수강합니다.</p>
+        <a class="btn" style="background:#eaf3ff;color:#1458a7" href="https://edu.sbiz.or.kr/" target="_blank" rel="noopener">지식배움터 바로가기 ↗</a>
+      </div>
+      <div class="card">
+        <h3>② 총 학습시간 확인</h3>
+        <p>온라인판로개척 교육의 합산 학습시간이 <b>10시간 이상</b>인지 확인합니다. 수강만 신청하고 실제 학습을 완료하지 않은 과정은 이수로 인정되지 않을 수 있으므로 완료 상태를 확인해 주세요.</p>
+      </div>
+      <div class="card">
+        <h3>③ AI 학습관 1강 이상</h3>
+        <p>온라인 10시간 조건과 함께 <b>AI 학습관 강의 최소 1개</b>를 반드시 이수합니다.</p>
+      </div>
+      <div class="card">
+        <h3>④ 이수내역 최종 점검</h3>
+        <p>수료 전 본인의 마이페이지에서 과정별 완료 여부와 총 학습시간을 확인하고, 운영사무국의 별도 제출 안내가 있는 경우 그 안내에 따라 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="prepare">
+    <div class="section-head">
+      <div><div class="kicker">Before class</div><h2>수업 전 준비 체크리스트</h2></div>
+      <p class="sub">실습 위주 수업이므로 사전에 계정과 기기를 준비하면 수업 진행이 훨씬 수월합니다.</p>
+    </div>
+    <div class="checklist">
+      <div class="item"><div class="box"></div><div><b>노트북 또는 실습 가능한 기기</b><br><span class="muted">충전기까지 함께 준비</span></div></div>
+      <div class="item"><div class="box"></div><div><b>스마트폰</b><br><span class="muted">인스타그램·클립 등 모바일 실습용</span></div></div>
+      <div class="item"><div class="box"></div><div><b>개인 이메일·로그인 정보 확인</b><br><span class="muted">필요 서비스 가입·인증에 사용</span></div></div>
+      <div class="item"><div class="box"></div><div><b>사업 상품 사진·소개자료</b><br><span class="muted">숏폼·상세페이지 실습에 활용 가능</span></div></div>
+      <div class="item"><div class="box"></div><div><b>교육 일정 전체 확인</b><br><span class="muted">선택한 과정의 3회차 모두 확인</span></div></div>
+      <div class="item"><div class="box"></div><div><b>온라인교육 진행상황 확인</b><br><span class="muted">10시간 + AI 1강 조건 미리 관리</span></div></div>
+      <div class="item"><div class="box"></div><div><b>신분 확인 자료</b><br><span class="muted">현장 출결·본인 확인 안내에 대비</span></div></div>
+      <div class="item"><div class="box"></div><div><b>강의실 최종 공지 확인</b><br><span class="muted">수업 전날 또는 당일 문자·공지 우선</span></div></div>
+    </div>
+  </section>
+
+  <section id="attendance">
+    <div class="section-head">
+      <div><div class="kicker">Attendance</div><h2>출석할 때 특히 주의해 주세요</h2></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>입실·퇴실 확인</h3><p>출결은 교육 수료와 직접 연결됩니다. 교육장에 도착한 뒤 안내된 QR·서명 또는 별도 출결 방식이 있다면 입실과 퇴실 모두 빠짐없이 확인해 주세요.</p></div>
+      <div class="card"><h3>지각·조퇴 관리</h3><p>오프라인 20시간의 80% 이상 출석이 필요하므로 지각이나 조퇴가 누적되지 않도록 전체 교육시간을 관리해 주세요.</p></div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <div class="section-head">
+      <div><div class="kicker">After completion</div><h2>수료 이후 지원</h2></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>1:1 전문가 멘토링</h3><p>운영·CS·세무 등 사업 운영 과정에서 필요한 분야를 중심으로 전문가 지원이 제공됩니다.</p></div>
+      <div class="card"><h3>판매·홍보 고도화</h3><p>상세페이지 개선, 광고 세팅, 촬영·콘텐츠 고도화 등 온라인 판로 확대를 위한 후속 지원이 안내됩니다.</p></div>
+      <div class="card"><h3>수료생 네트워킹</h3><p>기수별 네트워킹과 성과공유 기회를 통해 다른 소상공인 교육생과 경험을 공유할 수 있습니다.</p></div>
+      <div class="card"><h3>후속 사업 연계</h3><p>온라인 판로지원 등 연계 가능한 지원사업이 있을 경우 별도 안내를 통해 참여 기회를 확인할 수 있습니다.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <div><div class="kicker">FAQ</div><h2>자주 묻는 질문</h2></div>
+    </div>
+    <details open><summary>Q. 교육비가 정말 무료인가요?</summary><p>네. 국가 지원 사업으로 교육비가 전액 지원됩니다.</p></details>
+    <details><summary>Q. 누가 신청할 수 있나요?</summary><p>사업자등록을 보유한 소상공인 중 온라인시장 진출 또는 온라인 판매 활성화를 희망하는 분이 대상입니다. 예비창업자 등 세부 자격은 모집공고를 확인해 주세요.</p></details>
+    <details><summary>Q. 기초과정과 글로벌과정은 무엇이 다른가요?</summary><p>기초과정은 인스타그램·숏폼·네이버 클립 등 SNS 커머스 입문과 콘텐츠 제작 중심이고, 글로벌과정은 이베이·아마존 등 해외 이커머스 입점과 자사몰·AI 마케팅 고도화 중심입니다.</p></details>
+    <details><summary>Q. 온라인교육만 들으면 수료할 수 있나요?</summary><p>아닙니다. 온라인 필수교육과 오프라인 출석 기준을 모두 충족해야 합니다.</p></details>
+    <details><summary>Q. 오프라인 수업만 모두 참석하면 수료되나요?</summary><p>아닙니다. 온라인판로개척 교육 10시간 이상과 AI 학습관 1강 이상도 반드시 이수해야 합니다.</p></details>
+    <details><summary>Q. 컴퓨터를 잘 못 다뤄도 참여할 수 있나요?</summary><p>가능합니다. 기초과정은 디지털 입문자도 따라갈 수 있도록 실습 중심으로 구성되어 있습니다. 다만 실습 시간을 효율적으로 쓰려면 이메일·SNS 로그인 정보와 개인 기기를 미리 준비해 주세요.</p></details>
+    <details><summary>Q. 강의실은 어디인가요?</summary><p>교육은 숭실대학교에서 진행됩니다. 분반별 세부 강의실은 문자·공지 등 운영사무국의 최종 안내를 확인해 주세요.</p></details>
+    <details><summary>Q. 일정이 변경될 수도 있나요?</summary><p>네. 운영 상황에 따라 교육시간·강의실·세부 프로그램이 변경될 수 있으므로 수업 직전의 공식 안내를 우선해 주세요.</p></details>
+  </section>
+
+  <section id="links">
+    <div class="section-head">
+      <div><div class="kicker">Useful links</div><h2>바로가기</h2></div>
+    </div>
+    <div class="links">
+      <a class="linkcard" href="https://ssudt.co.kr/" target="_blank" rel="noopener"><b>공식 홈페이지 ↗</b><span>사업·교육과정·공지·FAQ</span></a>
+      <a class="linkcard" href="https://ssudt.co.kr/program.php" target="_blank" rel="noopener"><b>수업일정·교육프로그램 ↗</b><span>학기·과정별 세부 일정</span></a>
+      <a class="linkcard" href="https://ssudt.co.kr/apply.php" target="_blank" rel="noopener"><b>교육신청 안내 ↗</b><span>신청 자격·제출서류·선발절차</span></a>
+      <a class="linkcard" href="https://edu.sbiz.or.kr/" target="_blank" rel="noopener"><b>소상공인 지식배움터 ↗</b><span>온라인 필수교육 수강</span></a>
+      <a class="linkcard" href="https://www.sbiz24.kr/" target="_blank" rel="noopener"><b>소상공인24 ↗</b><span>디지털 특성화대학 사업 신청</span></a>
+      <a class="linkcard" href="https://m.blog.naver.com/ssudt_/224375121250" target="_blank" rel="noopener"><b>네이버 블로그 안내글 ↗</b><span>공유해주신 원문 게시글</span></a>
+    </div>
+  </section>
+
+  <section>
+    <div class="notice" style="background:#edf7ff;border-color:#bed9f1">
+      ℹ️ <div><strong style="color:#14558e">안내:</strong> 본 페이지는 교육생이 정보를 빠르게 확인할 수 있도록 공개된 공식 안내 내용을 한 페이지에 재구성한 버전입니다. 최종 교육시간, 강의실, 개별 선발·출석·수료 여부는 운영사무국의 문자·전화·공지를 우선합니다.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>숭실대학교 소상공인 디지털 특성화대학</strong><p>서울특별시 동작구 상도로 369 숭실대학교<br>교육문의 1566-0762 · 평일 09:00~18:00</p><div class="small">중소벤처기업부 · 소상공인시장진흥공단 주관 / 숭실대학교 운영</div></div>
+    <div class="small">※ 세부 일정 및 교육 내용은 운영 상황에 따라 변경될 수 있습니다.<br>※ 수료조건은 온라인·오프라인 필수기준을 모두 충족해야 합니다.</div>
+  </div>
+</footer>
+
+<div class="mobilebar">
+  <a href="#completion">수료조건 보기</a>
+  <a href="https://edu.sbiz.or.kr/" target="_blank" rel="noopener">온라인교육 ↗</a>
+</div>
+</body>
+</html>
