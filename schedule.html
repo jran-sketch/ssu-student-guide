@@ -1,0 +1,232 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>교육 일정·장소</title><style>
+
+:root{
+  --navy:#073a7a; --blue:#0b4aa2; --blue2:#1f6fe5; --ink:#172033;
+  --muted:#667085; --line:#e3eaf4; --bg:#f5f8fc; --card:#fff;
+  --soft:#eef5ff; --shadow:0 14px 38px rgba(18,55,100,.09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,"Noto Sans KR","Apple SD Gothic Neo",Arial,sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:28px 22px 60px}
+.top{display:flex;align-items:center;gap:22px;margin-bottom:22px}
+.logo{width:230px;max-width:48vw;height:auto;display:block}
+.top-title{font-weight:800;color:var(--navy);font-size:17px;line-height:1.45}
+.top-title span{font-weight:600;color:var(--muted);font-size:14px}
+.hero{background:linear-gradient(135deg,#0b3f8f,#1f6fe5);border-radius:30px;padding:40px;color:white;box-shadow:var(--shadow)}
+.welcome{font-size:15px;font-weight:800;opacity:.82;margin-bottom:8px}
+.hero h1{font-size:38px;line-height:1.28;margin:0 0 13px;letter-spacing:-1.4px}
+.hero h1 em{font-style:normal;color:#fff7bf}
+.hero p{margin:0 0 26px;color:#eaf2ff;font-size:17px}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.quick a{background:rgba(255,255,255,.97);color:var(--navy);border-radius:16px;padding:16px 12px;font-weight:800;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.quick a:hover{transform:translateY(-1px)}
+.ico{margin-right:5px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;margin-top:20px;box-shadow:0 8px 28px rgba(22,53,91,.05)}
+.focus-panel{display:flex;align-items:center;justify-content:space-between;gap:24px;border-color:#cfe0fa;background:linear-gradient(180deg,#fff,#f8fbff)}
+.focus-label{display:inline-block;color:var(--blue);font-size:13px;font-weight:900;margin-bottom:5px}
+.panel h2{margin:0 0 8px;color:var(--navy);font-size:25px;letter-spacing:-.7px}
+.focus-copy p,.sub{margin:0;color:var(--muted)}
+.focus-btn{flex:0 0 auto;background:var(--blue);color:white;border-radius:13px;padding:14px 19px;font-weight:900}
+.student-notice{margin:18px 0;padding:16px 18px;border:1px solid #dbe8ff;background:#f5f9ff;border-radius:16px;display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap}
+.student-notice strong{color:var(--blue)}
+.student-notice span{color:#475467}
+.student-notice a{color:var(--blue);font-weight:800;text-decoration:underline}
+.phase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.phase{position:relative;display:flex;flex-direction:column;min-height:255px;border:1px solid var(--line);border-radius:20px;padding:20px;background:#fff}
+.phase-num{font-size:12px;font-weight:900;color:var(--blue);letter-spacing:1px}
+.phase-icon{font-size:28px;margin:8px 0 2px}
+.phase h3{margin:0 0 10px;color:var(--navy);font-size:20px}
+.phase ul{padding-left:19px;margin:0}
+.phase li{margin:8px 0;color:#344054}
+.inline-task-link{color:var(--blue);font-weight:750}
+.inline-task-link:hover{text-decoration:underline}
+.mini-link-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.mini-link-grid>a{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:18px;padding:18px;background:#fbfdff}
+.mini-link-grid>a>span{font-size:28px}
+.mini-link-grid b{display:block;color:var(--navy);font-size:17px}
+.mini-link-grid small{display:block;color:var(--muted);margin-top:3px;line-height:1.5}
+.cheer{margin-top:20px;background:#eaf3ff;border-radius:22px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.cheer b{font-size:20px;color:var(--navy)}
+.cheer p{margin:4px 0 0;color:var(--muted)}
+.cheer img{width:185px;height:auto}
+footer{text-align:center;color:#8792a5;font-size:12px;padding:26px 0 0}
+
+/* schedule / online shared */
+.page-title{background:linear-gradient(135deg,#0b3f8f,#1f6fe5);color:white;border-radius:26px;padding:28px 30px;margin-bottom:18px}
+.page-title h1{margin:0;font-size:31px}
+.page-title p{margin:6px 0 0;color:#e9f2ff}
+.back{display:inline-block;margin-bottom:14px;color:var(--blue);font-weight:800}
+.course-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.course-tabs button,.course-tabs a{border:1px solid #cfd9e8;background:white;border-radius:999px;padding:10px 14px;font:inherit;font-weight:800;color:#344054;cursor:pointer}
+.course-tabs .active{background:var(--blue);border-color:var(--blue);color:white}
+.day-card{background:white;border:1px solid var(--line);border-radius:18px;margin:12px 0;overflow:hidden}
+.day-head{padding:17px 19px;font-weight:900;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;gap:15px}
+.day-body{padding:0 19px 18px;color:#475467}
+.day-body table{width:100%;border-collapse:collapse}
+.day-body th,.day-body td{border-top:1px solid var(--line);padding:11px 8px;text-align:left;vertical-align:top}
+.map-box{margin-top:18px;border:1px solid var(--line);border-radius:18px;padding:18px;background:white}
+.map-box iframe{width:100%;height:330px;border:0;border-radius:14px}
+.primary-btn{display:inline-block;background:var(--blue);color:white;padding:12px 17px;border-radius:12px;font-weight:850}
+.info-card{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;margin:14px 0}
+.info-card h2{color:var(--navy);margin-top:0}
+
+@media(max-width:820px){
+  .wrap{padding:18px 14px 42px}
+  .top{gap:14px}
+  .logo{width:185px;max-width:58vw}
+  .top-title{font-size:14px}
+  .hero{padding:28px 22px;border-radius:24px}
+  .hero h1{font-size:29px}
+  .hero p{font-size:15px}
+  .quick{grid-template-columns:1fr 1fr}
+  .focus-panel{align-items:flex-start;flex-direction:column}
+  .focus-btn{width:100%;text-align:center}
+  .phase-grid{grid-template-columns:1fr 1fr}
+  .mini-link-grid{grid-template-columns:1fr}
+  .cheer img{width:145px}
+}
+@media(max-width:520px){
+  .top-title{display:none}
+  .logo{width:205px;max-width:78vw}
+  .hero h1{font-size:25px}
+  .quick{grid-template-columns:1fr}
+  .panel{padding:21px 18px;border-radius:20px}
+  .phase-grid{grid-template-columns:1fr}
+  .phase{min-height:auto}
+  .cheer{align-items:flex-start;flex-direction:column}
+  .cheer img{width:170px}
+  .desktop-br{display:none}
+}
+
+.teacher{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:#eef5ff;color:#0b4aa2;font-size:12px;font-weight:850;white-space:nowrap}.session-detail li{margin:8px 0}.session-detail li span{vertical-align:middle}
+
+
+/* v17: missing component styles restored */
+.pagehero{
+  background:linear-gradient(135deg,#0b3f8f,#1f6fe5);
+  color:#fff;border-radius:26px;padding:30px 32px;margin:8px 0 18px;
+  box-shadow:var(--shadow)
+}
+.pagehero h1{margin:0;font-size:32px;letter-spacing:-1px}
+.pagehero p{margin:7px 0 0;color:#eaf2ff;font-size:16px}
+
+.course-pills{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:18px 0 22px}
+.course-pill{
+  appearance:none;-webkit-appearance:none;border:1px solid #d7e1ef!important;background:#fff!important;
+  border-radius:16px!important;padding:14px 13px!important;min-height:78px;text-align:left;
+  cursor:pointer;color:#344054!important;font:inherit;box-shadow:0 3px 10px rgba(18,55,100,.04)
+}
+.course-pill b{display:block;font-size:15px;color:var(--navy);margin-bottom:3px}
+.course-pill small{display:block;color:var(--muted);line-height:1.4;font-size:12px}
+.course-pill.active{background:var(--blue)!important;border-color:var(--blue)!important}
+.course-pill.active b,.course-pill.active small{color:#fff!important}
+
+.course-content{display:none}
+.course-content.active{display:block}
+.selected-course{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  margin:6px 0 16px;padding:16px 18px;border-radius:16px;background:#f7faff;border:1px solid #dfe9f7
+}
+.selected-course span{
+  display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;
+  background:#e7f0ff;color:var(--blue);font-size:13px;font-weight:900
+}
+.selected-course h3{margin:0;color:var(--navy);font-size:20px}
+
+.place{
+  display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap;
+  margin:0 0 12px;padding:14px 16px;border:1px solid var(--line);border-radius:15px;background:#fff
+}
+.place b{color:var(--navy)}
+.place span{color:#344054}
+
+.mapbox{
+  border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;margin-bottom:18px
+}
+.mapbox iframe{display:block;width:100%;height:330px;border:0}
+.mapinfo{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 17px}
+.mapinfo strong{display:block;color:var(--navy)}
+.mapinfo span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.maplink{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;background:var(--blue);color:#fff;border-radius:11px;padding:10px 13px;font-weight:850;font-size:13px}
+
+.schedule{margin-top:8px}
+.accordion{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;margin:12px 0}
+.session-head{
+  width:100%;appearance:none;-webkit-appearance:none;border:0;background:#fff;
+  padding:17px 18px;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:14px;
+  text-align:left;cursor:pointer;font:inherit;color:var(--ink)
+}
+.session-head:hover{background:#f8fbff}
+.session-date{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.session-date strong{font-size:17px;color:var(--navy)}
+.session-time{
+  display:inline-flex;padding:4px 9px;border-radius:999px;background:#eef5ff;color:var(--blue);
+  font-size:13px;font-weight:900
+}
+.session-label{font-size:13px;font-weight:850;color:#475467}
+.toggle{
+  display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;
+  background:#eef5ff;color:var(--blue);font-size:20px;font-weight:700
+}
+.session-detail{
+  max-height:0;overflow:hidden;padding:0 18px;background:#fbfdff;
+  transition:max-height .25s ease
+}
+.session-detail.open{padding-bottom:18px}
+.session-detail h3{margin:16px 0 8px;color:var(--navy);font-size:16px}
+.session-detail ul{margin:0;padding-left:20px}
+.session-detail li{padding:6px 0;color:#344054}
+.detail-note{
+  margin-top:12px;padding:12px 14px;border-radius:12px;background:#eef5ff;color:#35527a;font-size:13px
+}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.info{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff}
+.info h2{margin:0 0 10px;color:var(--navy);font-size:21px}
+.big{font-size:30px;font-weight:900;color:var(--blue);line-height:1.2;margin:8px 0}
+.soft{color:var(--muted)}
+.note{margin-top:14px;padding:13px 15px;border-radius:13px;background:#f5f9ff;color:#475467}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;
+  background:var(--blue);color:#fff;font-weight:850
+}
+.btn.soft{background:#eef5ff;color:var(--blue)}
+
+@media(max-width:920px){
+  .course-pills{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  .pagehero{padding:24px 20px;border-radius:21px}
+  .pagehero h1{font-size:27px}
+  .course-pills{grid-template-columns:1fr}
+  .course-pill{min-height:auto}
+  .selected-course{align-items:flex-start;flex-direction:column;gap:8px}
+  .mapbox iframe{height:250px}
+  .mapinfo{align-items:flex-start;flex-direction:column}
+  .maplink{width:100%}
+  .session-head{grid-template-columns:1fr auto}
+  .session-label{grid-column:1/2}
+  .toggle{grid-row:1/3;grid-column:2/3}
+  .two{grid-template-columns:1fr}
+}
+
+</style></head><body><div class="wrap"><header class="top"><a href="index.html"><img class="logo" src="soongsil-logo.jpg" alt="숭실대학교"></a><div class="top-title">2026 숭실 디지털 특성화 대학<br><span>수강생 통합 안내</span></div></header><a class="back" href="index.html">← 통합 안내로 돌아가기</a>
+<section class="pagehero"><h1>교육 일정 · 장소</h1><p>9월·10월·강원 팝업까지 같은 페이지에서 확인할 수 있습니다. 참여하시는 과정만 선택해주세요.</p></section>
+<section class="panel"><h2>내 과정 선택</h2><div class="sub">한 번 선택하면 다음 방문에도 선택한 과정이 유지됩니다.</div><div class="course-pills"><button class="course-pill active" data-course="sep-basic"><b>9월 기초</b><small>플랫폼 구축 및 숏폼 콘텐츠 마케팅 실무</small></button><button class="course-pill" data-course="sep-global"><b>9월 글로벌</b><small>글로벌 판로 개척 및 AI 마케팅 고도화 실무</small></button><button class="course-pill" data-course="oct-basic"><b>10월 기초</b><small>플랫폼 구축 및 숏폼 콘텐츠 마케팅 실무</small></button><button class="course-pill" data-course="oct-global"><b>10월 글로벌</b><small>글로벌 판로 개척 및 AI 마케팅 고도화 실무</small></button><button class="course-pill" data-course="gangwon"><b>강원 팝업</b><small>플랫폼 구축 및 숏폼 콘텐츠 마케팅 실무</small></button></div><div class="course-content active" id="sep-basic"><div class="selected-course"><span>9월 기초</span><h3>플랫폼 구축 및 숏폼 콘텐츠 마케팅 실무</h3></div><div class="place"><b>📍 교육장소</b><span>숭실대학교 벤처중소기업센터 2층 207호</span></div><div class="mapbox"><iframe src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B2%A4%EC%B2%98%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%84%BC%ED%84%B0&output=embed" loading="lazy" title="숭실대학교 벤처중소기업센터 지도"></iframe></div><div class="schedule active"><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>9월 15일(화)</strong><span class="session-time">09:00~18:00</span></div><div class="session-label">1회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>온라인 유통에서의 물류</span><small class="teacher">강사 · 권소영</small></li><li><span>인스타그램 계정 최적화·숏폼 커머스 수익화</span><small class="teacher">강사 · 권소영</small></li><li><span>판매전환형 숏폼 콘텐츠 구조 분석</span><small class="teacher">강사 · 정유진</small></li><li><span>AI 숏폼 콘텐츠 제작 실습</span><small class="teacher">강사 · 정유진</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>9월 22일(화)</strong><span class="session-time">09:00~18:00</span></div><div class="session-label">2회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>AI 네이버 클립 제작 실전</span><small class="teacher">강사 · 정유진</small></li><li><span>플랫폼별 숏폼 업로드·상품 결제 링크 연결</span><small class="teacher">강사 · 정유진</small></li><li><span>AI 공동구매 콘텐츠 로드맵</span><small class="teacher">강사 · 권소영</small></li><li><span>인플루언서 공구 협업 전략</span><small class="teacher">강사 · 권소영</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>9월 29일(화)</strong><span class="session-time">09:00~13:00</span></div><div class="session-label">3회차 · 마지막 교육일</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>소상공인 디지털 전환 전략</span><small class="teacher">강사 · 채연희</small></li><li><span>소상공인을 위한 AI 툴 이용 방법</span><small class="teacher">강사 · 이다윗</small></li></ul><div class="detail-note">마지막 교육일 만족도 조사에는 해당일 강의 만족도와 과정 전체 만족도가 함께 포함됩니다.</div></div></div></div></div><div class="course-content" id="sep-global"><div class="selected-course"><span>9월 글로벌</span><h3>글로벌 판로 개척 및 AI 마케팅 고도화 실무</h3></div><div class="global-prep" style="margin:14px 0 18px;padding:16px;border-radius:16px;background:#fff8e8;border:1px solid #f0d58b"><strong style="color:#7a4b00">🌏 글로벌 과정 필수 준비물</strong><p style="margin:6px 0 10px">수업 중 실제 글로벌 이커머스 마켓 입점 실습을 진행합니다. 아래 준비물을 반드시 지참해 주세요.</p><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;font-size:13px"><span>✓ 노트북</span><span>✓ 스마트폰(핫스팟)</span><span>✓ 여권(없다면 신분증)</span><span>✓ 개인 공동인증서</span><span>✓ 사업자 공동인증서</span><span>✓ 사업자 통장 사본</span></div></div><div class="place"><b>📍 교육장소</b><span>숭실대학교 벤처중소기업센터 2층 207호</span></div><div class="mapbox"><iframe src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B2%A4%EC%B2%98%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%84%BC%ED%84%B0&output=embed" loading="lazy" title="숭실대학교 벤처중소기업센터 지도"></iframe></div><div class="schedule active"><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>9월 7일(월)</strong><span class="session-time">10:00~19:00</span></div><div class="session-label">1회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>위탁판매 상품 선정하기</span><small class="teacher">강사 · 이제봉</small></li><li><span>상위 노출을 위한 키워드 전략</span><small class="teacher">강사 · 이제봉</small></li><li><span>온라인 유통에서의 물류</span><small class="teacher">강사 · 홍석주</small></li><li><span>글로벌 이커머스 마켓 입점</span><small class="teacher">강사 · 홍석주</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>9월 14일(월)</strong><span class="session-time">10:00~19:00</span></div><div class="session-label">2회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>AI를 이용하여 상품 및 쇼핑몰 운영 최적화하기</span><small class="teacher">강사 · 이제봉</small></li><li><span>플랫폼 종속에서 벗어난 자사몰 구축하기</span><small class="teacher">강사 · 이제봉</small></li><li><span>노출 순위 상승을 위한 상품정보 만들기</span><small class="teacher">강사 · 홍석주</small></li><li><span>글로벌 이커머스 마케팅 전략</span><small class="teacher">강사 · 홍석주</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>9월 29일(화)</strong><span class="session-time">14:00~18:00</span></div><div class="session-label">3회차 · 마지막 교육일</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>소상공인을 위한 AI 툴 이용 방법</span><small class="teacher">강사 · 이다윗</small></li><li><span>소상공인 디지털 전환 전략</span><small class="teacher">강사 · 채연희</small></li></ul><div class="detail-note">마지막 교육일 만족도 조사에는 해당일 강의 만족도와 과정 전체 만족도가 함께 포함됩니다.</div></div></div></div></div><div class="course-content" id="oct-basic"><div class="selected-course"><span>10월 기초</span><h3>플랫폼 구축 및 숏폼 콘텐츠 마케팅 실무</h3></div><div class="place"><b>📍 교육장소 안내</b><span><strong>10월 15일(목) 1회차: 숭실대학교 전산관 105호 다솜홀</strong><br>10월 22일(목)·29일(목): 숭실대학교 벤처중소기업센터 2층 207호</span></div><div class="mapbox"><iframe src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90%20%EC%A0%84%EC%82%B0%EA%B4%80%20105%ED%98%B8%20%EB%8B%A4%EC%86%9C%ED%99%80&output=embed" loading="lazy" title="10월 15일 숭실대학교 전산관 지도"></iframe><div class="mapinfo"><div><strong>10월 15일(목) — 숭실대학교 전산관 105호 다솜홀</strong><span>지도는 10월 15일 교육장소를 안내합니다. 다른 교육일은 벤처중소기업센터 2층 207호입니다.</span></div><a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90%20%EC%A0%84%EC%82%B0%EA%B4%80%20105%ED%98%B8%20%EB%8B%A4%EC%86%9C%ED%99%80" target="_blank" rel="noopener">지도 크게 보기 →</a></div></div><div class="schedule active"><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 15일(목)</strong><span class="session-time">09:00~18:00</span></div><div class="session-label">1회차 · 전산관 105호 다솜홀</div><span class="toggle">＋</span></button><div class="session-detail"><div class="detail-note"><strong>📍 장소 변경:</strong> 10월 15일(목) 교육은 숭실대학교 전산관 105호 다솜홀에서 진행됩니다.</div><h3>세부 프로그램</h3><ul><li><span>온라인 유통에서의 물류</span><small class="teacher">강사 · 권소영</small></li><li><span>인스타그램 계정 최적화·숏폼 커머스 수익화</span><small class="teacher">강사 · 권소영</small></li><li><span>판매전환형 숏폼 콘텐츠 구조 분석</span><small class="teacher">강사 · 정유진</small></li><li><span>AI 숏폼 콘텐츠 제작 실습</span><small class="teacher">강사 · 정유진</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 22일(목)</strong><span class="session-time">09:00~18:00</span></div><div class="session-label">2회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>AI 네이버 클립 제작 실전</span><small class="teacher">강사 · 정유진</small></li><li><span>플랫폼별 숏폼 업로드·상품 결제 링크 연결</span><small class="teacher">강사 · 정유진</small></li><li><span>AI 공동구매 콘텐츠 로드맵</span><small class="teacher">강사 · 권소영</small></li><li><span>인플루언서 공구 협업 전략</span><small class="teacher">강사 · 권소영</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 29일(목)</strong><span class="session-time">09:00~13:00</span></div><div class="session-label">3회차 · 마지막 교육일</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>소상공인 디지털 전환 전략</span><small class="teacher">강사 · 채연희</small></li><li><span>소상공인을 위한 AI 툴 이용 방법</span><small class="teacher">강사 · 이다윗</small></li></ul><div class="detail-note">마지막 교육일 만족도 조사에는 해당일 강의 만족도와 과정 전체 만족도가 함께 포함됩니다.</div></div></div></div></div><div class="course-content" id="oct-global"><div class="selected-course"><span>10월 글로벌</span><h3>글로벌 판로 개척 및 AI 마케팅 고도화 실무</h3></div><div class="global-prep" style="margin:14px 0 18px;padding:16px;border-radius:16px;background:#fff8e8;border:1px solid #f0d58b"><strong style="color:#7a4b00">🌏 글로벌 과정 필수 준비물</strong><p style="margin:6px 0 10px">수업 중 실제 글로벌 이커머스 마켓 입점 실습을 진행합니다. 아래 준비물을 반드시 지참해 주세요.</p><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;font-size:13px"><span>✓ 노트북</span><span>✓ 스마트폰(핫스팟)</span><span>✓ 여권(없다면 신분증)</span><span>✓ 개인 공동인증서</span><span>✓ 사업자 공동인증서</span><span>✓ 사업자 통장 사본</span></div></div><div class="place"><b>📍 교육장소</b><span>숭실대학교 벤처중소기업센터 2층 207호</span></div><div class="mapbox"><iframe src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B2%A4%EC%B2%98%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%84%BC%ED%84%B0&output=embed" loading="lazy" title="숭실대학교 벤처중소기업센터 지도"></iframe></div><div class="schedule active"><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 19일(월)</strong><span class="session-time">10:00~19:00</span></div><div class="session-label">1회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>위탁판매 상품 선정하기</span><small class="teacher">강사 · 이제봉</small></li><li><span>상위 노출을 위한 키워드 전략</span><small class="teacher">강사 · 이제봉</small></li><li><span>온라인 유통에서의 물류</span><small class="teacher">강사 · 홍석주</small></li><li><span>글로벌 이커머스 마켓 입점</span><small class="teacher">강사 · 홍석주</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 26일(월)</strong><span class="session-time">10:00~19:00</span></div><div class="session-label">2회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>AI를 이용하여 상품 및 쇼핑몰 운영 최적화하기</span><small class="teacher">강사 · 이제봉</small></li><li><span>플랫폼 종속에서 벗어난 자사몰 구축하기</span><small class="teacher">강사 · 이제봉</small></li><li><span>노출 순위 상승을 위한 상품정보 만들기</span><small class="teacher">강사 · 홍석주</small></li><li><span>글로벌 이커머스 마케팅 전략</span><small class="teacher">강사 · 홍석주</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 29일(목)</strong><span class="session-time">14:00~18:00</span></div><div class="session-label">3회차 · 마지막 교육일</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>소상공인을 위한 AI 툴 이용 방법</span><small class="teacher">강사 · 이다윗</small></li><li><span>소상공인 디지털 전환 전략</span><small class="teacher">강사 · 채연희</small></li></ul><div class="detail-note">마지막 교육일 만족도 조사에는 해당일 강의 만족도와 과정 전체 만족도가 함께 포함됩니다.</div></div></div></div></div><div class="course-content" id="gangwon"><div class="selected-course"><span>강원 팝업</span><h3>플랫폼 구축 및 숏폼 콘텐츠 마케팅 실무</h3></div><div class="place"><b>📍 교육장소</b><span>강원특별자치도농업기술원 치유농업센터<br>[24203] 강원특별자치도 춘천시 신북읍 장본길 40</span></div><div class="mapbox">
+<iframe src="https://www.google.com/maps?q=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%20%EC%8B%A0%EB%B6%81%EC%9D%8D%20%EC%9E%A5%EB%B3%B8%EA%B8%B8%2040%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%EB%86%8D%EC%97%85%EA%B8%B0%EC%88%A0%EC%9B%90&output=embed" loading="lazy" title="강원특별자치도농업기술원 치유농업센터 지도"></iframe>
+<div class="mapinfo"><div><strong>강원특별자치도농업기술원 치유농업센터</strong><span>[24203] 강원특별자치도 춘천시 신북읍 장본길 40</span></div>
+<a class="maplink" href="https://www.google.com/maps/search/?api=1&query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%20%EC%8B%A0%EB%B6%81%EC%9D%8D%20%EC%9E%A5%EB%B3%B8%EA%B8%B8%2040%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%EB%86%8D%EC%97%85%EA%B8%B0%EC%88%A0%EC%9B%90" target="_blank" rel="noopener">지도 크게 보기 →</a></div>
+</div><div class="schedule active"><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 14일(수)</strong><span class="session-time">09:00~18:00</span></div><div class="session-label">1회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>온라인 유통에서의 물류</span><small class="teacher">강사 · 정유진</small></li><li><span>인스타그램 계정 최적화·숏폼 커머스 수익화</span><small class="teacher">강사 · 정유진</small></li><li><span>판매전환형 숏폼 콘텐츠 구조 분석</span><small class="teacher">강사 · 정유진</small></li><li><span>AI 숏폼 콘텐츠 제작 실습</span><small class="teacher">강사 · 정유진</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 21일(수)</strong><span class="session-time">09:00~18:00</span></div><div class="session-label">2회차</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>AI 네이버 클립 제작 실전</span><small class="teacher">강사 · 권소영</small></li><li><span>플랫폼별 숏폼 업로드·상품 결제 링크 연결</span><small class="teacher">강사 · 권소영</small></li><li><span>AI 공동구매 콘텐츠 로드맵</span><small class="teacher">강사 · 권소영</small></li><li><span>인플루언서 공구 협업 전략</span><small class="teacher">강사 · 권소영</small></li></ul></div></div><div class="accordion"><button class="session-head" type="button" aria-expanded="false"><div class="session-date"><strong>10월 28일(수)</strong><span class="session-time">09:00~13:00</span></div><div class="session-label">3회차 · 마지막 교육일</div><span class="toggle">＋</span></button><div class="session-detail"><h3>세부 프로그램</h3><ul><li><span>소상공인 디지털 전환 전략</span><small class="teacher">강사 · 채연희</small></li><li><span>소상공인을 위한 AI 툴 이용 방법</span><small class="teacher">강사 · 안정란</small></li></ul><div class="detail-note">마지막 교육일 만족도 조사에는 해당일 강의 만족도와 과정 전체 만족도가 함께 포함됩니다.</div></div></div></div></div></section>
+<footer>숭실대학교 디지털특성화대학 운영사무국</footer></div>
+<script>
+const pills=[...document.querySelectorAll('.course-pill')];
+function closeAcc(btn){btn.setAttribute('aria-expanded','false');btn.querySelector('.toggle').textContent='＋';const d=btn.nextElementSibling;d.style.maxHeight=null;d.classList.remove('open')}
+function openAcc(btn){btn.setAttribute('aria-expanded','true');btn.querySelector('.toggle').textContent='−';const d=btn.nextElementSibling;d.classList.add('open');d.style.maxHeight=d.scrollHeight+'px'}
+function choose(id){pills.forEach(p=>p.classList.toggle('active',p.dataset.course===id));document.querySelectorAll('.course-content').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.session-head[aria-expanded="true"]').forEach(closeAcc);localStorage.setItem('ssu-course-2026',id)}
+pills.forEach(p=>p.onclick=()=>choose(p.dataset.course));
+document.querySelectorAll('.session-head').forEach(btn=>btn.onclick=()=>{const open=btn.getAttribute('aria-expanded')==='true';btn.closest('.course-content').querySelectorAll('.session-head[aria-expanded="true"]').forEach(x=>{if(x!==btn)closeAcc(x)});open?closeAcc(btn):openAcc(btn)});
+choose(localStorage.getItem('ssu-course-2026')||'sep-basic');
+</script></body></html>
